@@ -1,50 +1,177 @@
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;300;400;500;600;700&family=Roboto:wght@100;300;400;500&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-   
-}
+ * {
+     margin: 0;
+     padding: 0;
+ }
 
-body{
-     background-color: rgb(217, 215, 215);
-}
+ :root {
+     --bg-color: rgb(217, 215, 215);
+     --text: rgb(54, 53, 53);
+     --heading: rgb(172, 6, 6);
+     --button: rgb(8, 111, 230);
+     --primary: rgb(136, 35, 35);
+     --secondary: rgb(11, 198, 152);
+     --hover: rgb(241, 147, 88);
+ }
 
-:root{
-    --bg-color: rgb(217, 215, 215);
-    --text: rgb(54, 53, 53);
-    --heading: rgb(172, 6, 6);
-    --button: rgb(8, 111, 230);
-    --primary: rgb(136, 35, 35);
-    --secondary: rgb(11, 198, 152);
-    --hover: rgb(241, 147, 88);
-}
+ .my-btn {
+     font-size: 20px;
+     ;
+     border-radius: 50px;
+     height: 60px;
+     font-weight: 500;
+     cursor: pointer;
+     padding: 0px 10px;
+     animation: slideRightToLeft 4s ease-out 1;
+ }
 
-.my-btn{
-    color: var(--text);
-    background-color: var(--secondary);
-    border-radius: 50px;
-    height: 40px;
-    font-weight: 500;
-    cursor: pointer;
-}
+ .my-btn:hover {
+     background-color: var(--hover);
 
-.my-btn:hover{
-    background-color: var(--hover);
+ }
 
-}
-
-.image{
-    width: 100%;
-    height: 100%;
-    background: var();
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.home-wrapper{
+ /* .home-wrapper{
     width: 100%;
     min-height: 100vh;
     background: var(--bg-color);
     overflow-x: hidden;
-}
+} */
+
+
+ /* .header-wrapper{
+    background: linear-gradient(45deg, rgb(199, 88, 88), rgb(109, 109, 220), rgb(143, 76, 143))
+} */
+
+ .bg-section {
+     width: 100%;
+     height: 100vh;
+     background-image: url(./images/image6.jpg);
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     overflow: hidden;
+ }
+
+ .navbar {
+     width: 100%;
+     height: 80px;
+     /* background-color: rgb(161, 161, 169); */
+     backdrop-filter: blur(15.5px);
+     --webkit-backdrop-filter: blur(15.5px) padding: 15px 150px;
+     border-bottom: 0.5px solid rgb(95, 95, 97);
+     position: fixed;
+ }
+
+ .navbar .navbar-brand {
+     color: rgb(135, 4, 4);
+     font-size: 35px;
+     font-weight: 600;
+     font: bolder;
+ }
+
+ .navbar-nav {
+     padding: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .navbar-nav .nav-item {
+     color: rgb(10, 10, 117);
+     font-size: 20px;
+     font-weight: 600;
+     float: right;
+ }
+
+ .home-wrapper {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+
+ }
+
+ .home-text {
+     color: rgb(211, 205, 205);
+     font-size: 40px;
+     font-weight: bold;
+     margin-bottom: 20px;
+
+ }
+
+ span {
+     font-weight: 800;
+ }
+
+ @keyframes slideLeftToRight {
+     from {
+         transform: translateY(-100%);
+     }
+
+     to {
+         transform: translateY(0);
+     }
+ }
+
+ @keyframes slideRightToLeft {
+     from {
+         transform: translateY(-100%);
+     }
+
+     to {
+         transform: translateY(0);
+     }
+ }
+
+ .about-wrapper {
+     background-image: url(./images/bg10.jpg);
+     backdrop-filter: blur(15.5px);
+     --webkit-backdrop-filter: blur(15.5px) padding: 15px 150px;
+ }
+
+ .about-section {
+     width: 100%;
+     height: 100vh;
+     padding: 20px;
+     align-items: center;
+     display: flex;
+ }
+
+ .image-section {
+     width: 100%;
+     height: 100%;
+     border-radius: 2px solid black;
+     overflow: hidden;
+ }
+
+ .about-img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     object-position: center;
+     /* margin: 30px; */
+ }
+
+ .about-content {
+     color: lightgray;
+     padding: 40px;
+ }
+
+ .about-content .about-title {
+     font-size: 30px;
+     text-align: center;
+     padding: 20px;
+ }
+
+ .about-content .about-info {
+     font-size: 20px;
+     text-align: justify;
+     padding: 10px;
+ }
+
+ .about-content .my-btn {
+     margin-right: 50px;
+ }
