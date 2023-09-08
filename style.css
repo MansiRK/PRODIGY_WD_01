@@ -6,18 +6,19 @@
  }
 
  :root {
-     --bg-color: rgb(217, 215, 215);
-     --text: rgb(54, 53, 53);
-     --heading: rgb(172, 6, 6);
+     --para: black;
+     --text: rgb(211, 205, 205);
+     --form: rgba(232, 16, 27, 0.659);
+     --hover: rgb(181, 90, 4);
      --button: rgb(8, 111, 230);
-     --primary: rgb(136, 35, 35);
-     --secondary: rgb(11, 198, 152);
-     --hover: rgb(241, 147, 88);
+     --logo: rgb(220, 125, 37);
+     --links: rgb(241, 169, 110);
+     --button-border: rgb(255, 38, 0);
+     --button-hover: rgb(241, 147, 88);
  }
 
  .my-btn {
      font-size: 20px;
-     ;
      border-radius: 50px;
      height: 60px;
      font-weight: 500;
@@ -27,31 +28,23 @@
  }
 
  .my-btn:hover {
-     background-color: var(--hover);
-
+     background-color: var(--button-hover);
+     color: white;
+     border: 1px solid var(--button-border);
  }
-
- /* .home-wrapper{
-    width: 100%;
-    min-height: 100vh;
-    background: var(--bg-color);
-    overflow-x: hidden;
-} */
-
-
- /* .header-wrapper{
-    background: linear-gradient(45deg, rgb(199, 88, 88), rgb(109, 109, 220), rgb(143, 76, 143))
-} */
 
  .bg-section {
      width: 100%;
      height: 100vh;
-     background-image: url(./images/image6.jpg);
+     background-image: url(./images/bg1.jpg);
      background-position: center center;
      background-repeat: no-repeat;
      background-size: cover;
      overflow: hidden;
  }
+
+
+ /* Navbar */
 
  .navbar {
      width: 100%;
@@ -59,15 +52,15 @@
      /* background-color: rgb(161, 161, 169); */
      backdrop-filter: blur(15.5px);
      --webkit-backdrop-filter: blur(15.5px) padding: 15px 150px;
-     border-bottom: 0.5px solid rgb(95, 95, 97);
+     border-bottom: 0.2px solid rgb(95, 95, 97);
      position: fixed;
      z-index: 1000;
  }
 
  .navbar .navbar-brand {
-     color: rgb(220, 125, 37);
+     color: var(--logo);
      font-size: 35px;
-     font-weight: 600;
+     font-weight: 800;
      font: bolder;
      margin-left: 80px;
  }
@@ -79,45 +72,31 @@
      align-items: center;
  }
 
-
-
  .navbar-nav .nav-item .nav-link {
      /* color: rgb(112, 20, 34); */
-     color: rgb(241, 169, 110);
+     color: var(--links);
      font-size: 25px;
-     font-weight: 600;
+     font-weight: 700;
      /* float: right; */
      display: inline-block;
      position: relative;
      /* margin-left: 10px; */
  }
 
- /* .navbar-nav .nav-item .nav-link::after {
-     position: absolute;
-     content: '';
-     left: 0;
-     width: 0;
-     height: 2px;
-     background-color: rgb(222, 63, 63);
-     transition: 0.3s;
-     bottom: 0;
- }
-
- .navbar-nav .nav-item .nav-link.active::after,
- .navbar-nav .nav-item .nav-link:hover::after {
-     width: 100%;
- } */
-
  .navbar-nav .nav-item .nav-link:hover {
-     border-bottom: 2px solid rgb(220, 125, 37);
-     color: rgb(220, 125, 37);
-
+     border-bottom: 2px solid var(--hover);
+     color: var(--hover);
+     font-weight: 800;
  }
 
  .navbar-nav .nav-item .nav-link.active {
-     border-bottom: 2px solid rgb(220, 125, 37);
-     color: rgb(220, 125, 37);
+     border-bottom: 2px solid var(--hover);
+     color: var(--hover);
+     font-weight: 800;
  }
+
+
+ /* Home */
 
  .home-wrapper {
      width: 100%;
@@ -126,15 +105,13 @@
      align-items: center;
      justify-content: center;
      text-align: center;
-
  }
 
  .home-text {
-     color: rgb(211, 205, 205);
+     color: var(--text);
      font-size: 40px;
      font-weight: bold;
      margin-bottom: 20px;
-
  }
 
  span {
@@ -161,25 +138,61 @@
      }
  }
 
+ /* Destination */
+
+ .destinations-wrapper {
+     background-image: url(./images/bg2.jpg);
+     width: 100%;
+     height: 100%;
+ }
+
+ .destinations-wrapper h2 {
+     color: var(--text);
+ }
+
+ .destinations-wrapper .card {
+     margin: 15px;
+     width: 90%;
+     row-gap: 1.5rem;
+     column-gap: 0;
+     border-radius: 50px;
+     /* padding-left: 15px; */
+     overflow: hidden;
+ }
+
+ .destinations-wrapper .card:hover {
+     box-shadow: 2px 5px 15px rgb(15, 14, 14);
+     transform: translateY(-15px);
+ }
+
+ .card img {
+     height: 40vh;
+ }
+
+ .card .card-body h4 {
+     text-align: center;
+     font-size: 23px;
+     font-weight: 600;
+     text-transform: uppercase;
+ }
+
+ .card .card-body p {
+     font-size: 18px;
+     text-align: justify;
+ }
+
+
+ /* About */
+
  .about-wrapper {
-     background-image: url(./images/bg10.jpg);
+     background-image: url(./images/bg3.jpg);
      width: 100%;
      height: 100vh;
      background-size: cover;
      background-position: center;
      backdrop-filter: blur(15.5px);
      --webkit-backdrop-filter: blur(15.5px);
-
-
  }
-
- /* .about-section {
-     width: 100%;
-     height: 100vh;
-     padding: 20px;
-     align-items: center;
-     display: flex;
- } */
 
  .about-wrapper .container {
      padding-top: 80px;
@@ -201,7 +214,7 @@
  }
 
  .about-content {
-     color: lightgray;
+     color: var(--text);
      /* padding: 40px; */
  }
 
@@ -221,55 +234,11 @@
      margin-right: 10px;
  }
 
- .destinations-wrapper {
-     background-image: url(./images/halima-bouchouicha-_Yu-zWNMdyM-unsplash.jpg);
 
-     /* background: linear-gradient(45deg, rgb(204, 62, 83) rgb(210, 169, 210) rgb(208, 208, 231)); */
-     /* background: linear-gradient(45deg, rgb(251, 225, 229), rgb(210, 169, 210), rgb(208, 208, 231)); */
-     width: 100%;
-     height: 100%;
- }
-
- .destinations-wrapper h2 {
-     color: lightgray;
-
- }
-
- .destinations-wrapper .card {
-     margin: 15px;
-     width: 90%;
-     row-gap: 1.5rem;
-     column-gap: 0;
-     border-radius: 50px;
-     /* padding-left: 15px; */
-     overflow: hidden;
-
- }
-
- .destinations-wrapper .card:hover {
-     box-shadow: 2px 5px 15px rgb(121, 117, 117);
-     transform: translateY(-15px);
- }
-
- .card img {
-     height: 40vh;
- }
-
- .card .card-body h4 {
-     text-align: center;
-     font-size: 23px;
-     font-weight: 600;
-     text-transform: uppercase;
-
- }
-
- .card .card-body p {
-     font-size: 18px;
-     text-align: justify;
- }
+ /* Contact */
 
  .contact-wrapper {
-     background-image: url(./images/bg12.jpg);
+     background-image: url(./images/bg4.jpg);
      width: 100%;
      height: 100vh;
      background-position: center;
@@ -294,11 +263,11 @@
 
  .contact-wrapper p {
      font-size: 20px;
-     color: lightgray;
+     color: var(--text);
  }
 
  .contact-wrapper .form-label {
-     color: lightgray;
+     color: var(--text);
      font-size: 23px;
      padding-left: 20px;
  }
@@ -310,12 +279,6 @@
  }
 
  .contact-wrapper .form-control:hover {
-     border: 2px solid rgba(232, 16, 27, 0.659);
+     border: 2px solid var(--form);
      /* border-radius: 50px; */
  }
-
- /* ::placeholder {
-     padding-left: 20px;
- } */
-
- .contact-wrapper .my-btn {}
