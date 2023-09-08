@@ -1,2 +1,4 @@
 # PRODIGY_WD_01
-A blog website with interactive navigation menu using HTML, CSS and JS
+## A travel blog website with an interactive navigation menu.
+
+## Changes color and style when scrolled or hover over the menu.
