@@ -8,9 +8,10 @@
  :root {
      --para: black;
      --text: rgb(211, 205, 205);
+     --text: rgb(211, 205, 205);
+     --dark-text: rgb(42, 42, 44);
      --form: rgba(232, 16, 27, 0.659);
      --hover: rgb(181, 90, 4);
-     --button: rgb(8, 111, 230);
      --logo: rgb(220, 125, 37);
      --links: rgb(241, 169, 110);
      --button-border: rgb(255, 38, 0);
@@ -18,13 +19,23 @@
  }
 
  .my-btn {
-     font-size: 20px;
+     font-size: 15px;
      border-radius: 50px;
-     height: 60px;
+     height: 50px;
      font-weight: 500;
      cursor: pointer;
-     padding: 0px 10px;
-     animation: slideRightToLeft 4s ease-out 1;
+     padding: 0px 15px;
+     animation: slideUpToDown 4s ease-out 1;
+ }
+
+ @keyframes slideUpToDown {
+     from {
+         transform: translateY(-100%);
+     }
+
+     to {
+         transform: translateY(0);
+     }
  }
 
  .my-btn:hover {
@@ -75,7 +86,7 @@
  .navbar-nav .nav-item .nav-link {
      /* color: rgb(112, 20, 34); */
      color: var(--links);
-     font-size: 25px;
+     font-size: 20px;
      font-weight: 700;
      /* float: right; */
      display: inline-block;
@@ -84,12 +95,14 @@
  }
 
  .navbar-nav .nav-item .nav-link:hover {
+     font-size: 25px;
      border-bottom: 2px solid var(--hover);
      color: var(--hover);
      font-weight: 800;
  }
 
  .navbar-nav .nav-item .nav-link.active {
+     font-size: 25px;
      border-bottom: 2px solid var(--hover);
      color: var(--hover);
      font-weight: 800;
@@ -118,25 +131,6 @@
      font-weight: 800;
  }
 
- @keyframes slideLeftToRight {
-     from {
-         transform: translateY(-100%);
-     }
-
-     to {
-         transform: translateY(0);
-     }
- }
-
- @keyframes slideRightToLeft {
-     from {
-         transform: translateY(-100%);
-     }
-
-     to {
-         transform: translateY(0);
-     }
- }
 
  /* Destination */
 
@@ -172,12 +166,14 @@
  .card .card-body h4 {
      text-align: center;
      font-size: 23px;
-     font-weight: 600;
+     font-weight: 800;
      text-transform: uppercase;
+     color: rgb(4, 4, 53);
+     letter-spacing: 0.01cm;
  }
 
  .card .card-body p {
-     font-size: 18px;
+     font-size: 15px;
      text-align: justify;
  }
 
@@ -195,7 +191,7 @@
  }
 
  .about-wrapper .container {
-     padding-top: 80px;
+     padding-top: 50px;
  }
 
  .image-section {
@@ -225,7 +221,7 @@
  }
 
  .about-content .about-info {
-     font-size: 20px;
+     font-size: 18px;
      text-align: justify;
      padding: 5px;
  }
@@ -246,7 +242,7 @@
  }
 
  .contact-wrapper .container {
-     padding-top: 100px;
+     padding-top: 50px;
      display: flex;
      justify-content: center;
      /* Horizontally center */
@@ -262,23 +258,32 @@
  }
 
  .contact-wrapper p {
-     font-size: 20px;
+     font-size: 18px;
      color: var(--text);
  }
 
  .contact-wrapper .form-label {
      color: var(--text);
-     font-size: 23px;
+     font-size: 18px;
      padding-left: 20px;
+     font-weight: 500;
+ }
+
+ .contact-wrapper .form-label:hover {
+     font-weight: 700;
  }
 
  .contact-wrapper .form-control {
      color: black;
      border-radius: 50px;
-     padding-left: 40px;
+     padding-left: 30px;
  }
 
  .contact-wrapper .form-control:hover {
      border: 2px solid var(--form);
      /* border-radius: 50px; */
+ }
+
+ ::placeholder {
+     font-size: 12px;
  }
